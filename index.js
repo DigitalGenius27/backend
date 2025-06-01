@@ -37,6 +37,7 @@ app.post('/eventos', async (req, res) => {
     res.json(evento);
 });
 
-app.listen(3000, () => { // corregido el puerto
-    console.log('backend escuchando en http://localhost:3000');
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`backend escuchando en http://localhost:${PORT}`);
 });
